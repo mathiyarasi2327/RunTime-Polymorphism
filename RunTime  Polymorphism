@@ -1,0 +1,46 @@
+# RunTime-Polymorphism
+package javaapplication2;
+//runtime polymorphism
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Cat Meows");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog Barks");
+    }
+}
+
+class Cow extends Animal {
+    void sound() {
+        System.out.println("Cow Moos");
+    }
+}
+
+public class JavaApplication2 {
+    public static void main(String[] args) {
+        Animal a;  
+
+        a = new Cat();  
+        a.sound();     
+
+        a = new Dog();
+        a.sound();      
+
+        a = new Cow();  
+        a.sound();      
+    }
+}
+output:
+Cat Meows
+Dog Barks
+Cow Moos
